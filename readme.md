@@ -1,10 +1,10 @@
 # nwanime-dl Anime Downloader   
 ## Downloads anime from http://www.nwanime.com/ 
 
-usage:       
+###usage:       
 ```python nwanime-dl <url>```
 
-example:     
+###example:     
 ```
 thekindlyone@deepthought:~/projects/nwanime-dl/nwanime-dl$ python nwanime-dl.py http://www.nwanime.com/sengoku-musou-tv-episode-1/video/6a32205a3d414589b48c/
 Sengoku Musou (TV) Episode 1
@@ -36,3 +36,10 @@ Saving to: ‘Sengoku Musou (TV) Episode 1.mp4’
 
 File Downloaded
 ```
+
+
+### to do:              
+1. setuptools compatibility
+2. setuptools command line script
+3. range downloader
+4. reports on undownloadable episodes and undiscovered mirrors
