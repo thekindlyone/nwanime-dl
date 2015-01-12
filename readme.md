@@ -43,3 +43,4 @@ File Downloaded
 2. setuptools command line script
 3. range downloader
 4. reports on undownloadable episodes and undiscovered mirrors
+5. windows and python 3 support
