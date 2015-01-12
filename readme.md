@@ -1,12 +1,16 @@
 # nwanime-dl Anime Downloader   
 ## Downloads anime from http://www.nwanime.com/ 
 
+###Installation:
+git clone this repo. then run       
+```python setup.py install```
+
 ###usage:       
-```python nwanime-dl <url>```
+```nwanime-dl <url>```
 
 ###example:     
 ```
-thekindlyone@deepthought:~/projects/nwanime-dl/nwanime-dl$ python nwanime-dl.py http://www.nwanime.com/sengoku-musou-tv-episode-1/video/6a32205a3d414589b48c/
+thekindlyone@deepthought:~/projects/nwanime-dl/nwanime-dl$ nwanime-dl http://www.nwanime.com/sengoku-musou-tv-episode-1/video/6a32205a3d414589b48c/
 Sengoku Musou (TV) Episode 1
 --2015-01-12 09:14:28--  http://stream.vidcache.net/b4f835b701c8196880142f5a5a9351790bd3c12b.mp4?client_file_id=902765
 Resolving stream.vidcache.net (stream.vidcache.net)... 162.211.92.144, 162.211.92.130, 162.211.92.132, ...
@@ -39,8 +43,8 @@ File Downloaded
 
 
 ### to do:              
-1. setuptools compatibility
-2. setuptools command line script
+1. setuptools compatibility   [X]
+2. setuptools command line script   [X]
 3. range downloader
 4. reports on undownloadable episodes and undiscovered mirrors
 5. windows and python 3 support
