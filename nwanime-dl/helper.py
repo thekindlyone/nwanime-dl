@@ -86,14 +86,12 @@ def fetch_js(url):
 
 
 def get_vidname(url):
-    soup=get_soup(url)
+    soup = get_soup(url)
     try:
-        name=soup.select('#content_head > a:nth-of-type(3)')[0].text
+        name = soup.select('#content_head > a:nth-of-type(3)')[0].text
     except:
-        name=None
+        name = None
     return name
-
-
 
 
 def main():
