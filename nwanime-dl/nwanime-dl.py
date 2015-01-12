@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # coding: utf-8
 import requests
 from bs4 import BeautifulSoup
@@ -35,7 +36,7 @@ for mirror, link in mirrors:
                     video = video.group(1)
                     outfile = vidname + get_ext(video)
                     print 'attempting download from', mirror
-                    wget = subprocess.Popen(['wget', '-O', outfile, video])
+                    wget = subprocess.Popen(['wget', '-c','-O', outfile, video])
                     wget.wait()
                     break
 
