@@ -12,16 +12,17 @@ from os.path import splitext
 
 
 def get_ext(video_url):
+    """get extention of file from video url"""
     components = urlparse(video_url)
     return splitext(components.path)[-1]
 
 
 
 def download(url):
-    '''
+    """
     Downloads video in url. 
     download(url)
-    '''
+    """
     vidname = get_vidname(url)
     print vidname
     print 'fetching mirrors'
@@ -41,9 +42,10 @@ def download(url):
                         print 'attempting download from', mirror
                         wget = subprocess.Popen(['wget', '-c','-O', outfile, video])
                         wget.wait()
-                        break
+                        return wget.returncode,vidname
     else:
         print "Can't Download. No downloadable mirrors found. Sorry."
+        return 1,vidname
 
 def main():
     if len(sys.argv) > 1:
@@ -51,7 +53,7 @@ def main():
         download(url)
     else:
         print 'usage :nwanime-dl <url>'
-        sys.exit(0)
+        sys.exit(1)
 
 
 

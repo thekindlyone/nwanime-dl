@@ -2,13 +2,51 @@
 # coding: utf-8
 import sys
 from nwanime_dl import download
+from nwanime_dl.helper import get_next_episode_url as next_epi
+import argparse
+
+def urls(first,number):
+    current=first
+    for each in xrange(number):
+        if each==0:
+            yield current
+        else :
+            next_url=next_epi(current)
+            if not next_url:
+                break
+            current=next_url
+            yield next_url
+
+def generate_report(statuslist):
+    report='''
+{0}
+{1}
+{0}'''.format('*'*30,'\n'.join(statuslist))
+    return report 
+
+
+
+
 def main():
-    if len(sys.argv) > 1:
-        url = sys.argv[1]
+    parser=argparse.ArgumentParser()
+    parser.add_argument('url',help='url to download video from. In case of iterative starting url')
+    parser.add_argument('-i','--iterative',help='''For range downloads. 
+    eg. nwanime-dl -i 10 <url>
+    will download iteratively the video in <url> and the next 9 videos(total 10)''',type=int)
+    args=parser.parse_args()
+    url=args.url
+    statuslist=[]
+    if not args.iterative:
         download(url)
     else:
-        print 'usage :nwanime-dl <url>'
-        sys.exit(0)
+        for episode in urls(url,args.iterative):
+            result,name=download(episode)
+            statuslist.append(name+'\tDone' if result==0 else '\tNot Done')
+        print generate_report(statuslist)
+
+
+
+
 
 
 
