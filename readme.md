@@ -6,7 +6,22 @@ git clone this repo. then run
 ```python setup.py install```
 
 ###usage:       
-```nwanime-dl <url>```
+```nwanime-dl <url>```       
+```nwanime-dl -i 10 <url>```      
+```
+usage: nwanime-dl [-h] [-i ITERATIVE] url
+
+positional arguments:
+  url                   url to download video from. In case of iterative
+                        starting url
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i ITERATIVE, --iterative ITERATIVE
+                        For range downloads. eg. nwanime-dl -i 10 <url> will
+                        download iteratively the video in <url> and the next 9
+                        videos(total 10)
+```
 
 ###example:     
 ```
