@@ -5,6 +5,11 @@
 git clone this repo. then run       
 ```python setup.py install```
 
+###Dependencies:
+1. Requests library
+2. Beautifulsoup library
+3. wget
+
 ###usage:       
 ```nwanime-dl <url>```       
 ```nwanime-dl -i 10 <url>```      
@@ -60,6 +65,6 @@ File Downloaded
 ### to do:              
 1. setuptools compatibility   [X]
 2. setuptools command line script   [X]
-3. range downloader
+3. range downloader    [X]
 4. reports on undownloadable episodes and undiscovered mirrors
 5. windows and python 3 support
