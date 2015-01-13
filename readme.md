@@ -202,4 +202,4 @@ mac →
 6. -D option for explicitly specifying output directory
 
 
-special thanks to Derrick Kearney for helping me test it wit hhis first world internet connection.
+special thanks to [Derrick Kearney](https://github.com/diek) for helping me test it .
