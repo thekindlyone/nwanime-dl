@@ -30,35 +30,166 @@ optional arguments:
 
 ###example:     
 ```
-thekindlyone@deepthought:~/projects/nwanime-dl/nwanime-dl$ nwanime-dl http://www.nwanime.com/sengoku-musou-tv-episode-1/video/6a32205a3d414589b48c/
-Sengoku Musou (TV) Episode 1
---2015-01-12 09:14:28--  http://stream.vidcache.net/b4f835b701c8196880142f5a5a9351790bd3c12b.mp4?client_file_id=902765
-Resolving stream.vidcache.net (stream.vidcache.net)... 162.211.92.144, 162.211.92.130, 162.211.92.132, ...
-Connecting to stream.vidcache.net (stream.vidcache.net)|162.211.92.144|:80... connected.
+mac → nwanime-dl -i 5 http://www.nwanime.com/nanatsu-no-taizai-episode-3/video/640cffdd3031e7ff06ce/
+Nanatsu no Taizai Episode 3
+fetching mirrors
+mirrors found
+downloadable mirror found
+attempting download from VidWoot
+--2015-01-13 14:26:51--  http://stream.vidcache.net/5e608967206d65ff32d6a6fc9224b8cdcd7343a6.mp4?client_file_id=857520
+Resolving stream.vidcache.net... 162.211.92.130, 162.211.92.140, 162.211.92.133, ...
+Connecting to stream.vidcache.net|162.211.92.130|:80... connected.
 HTTP request sent, awaiting response... 302 Moved Temporarily
-Location: http://s19.vidcache.net/stream/b4f835b701c8196880142f5a5a9351790bd3c12b?client_file_id=902765&redirected_from=s32.vidcache.net [following]
---2015-01-12 09:14:29--  http://s19.vidcache.net/stream/b4f835b701c8196880142f5a5a9351790bd3c12b?client_file_id=902765&redirected_from=s32.vidcache.net
-Resolving s19.vidcache.net (s19.vidcache.net)... 162.211.92.131
-Connecting to s19.vidcache.net (s19.vidcache.net)|162.211.92.131|:80... connected.
+Location: http://s31.vidcache.net/stream/5e608967206d65ff32d6a6fc9224b8cdcd7343a6?client_file_id=857520&redirected_from=s18.vidcache.net [following]
+--2015-01-13 14:26:51--  http://s31.vidcache.net/stream/5e608967206d65ff32d6a6fc9224b8cdcd7343a6?client_file_id=857520&redirected_from=s18.vidcache.net
+Resolving s31.vidcache.net... 162.211.92.143
+Connecting to s31.vidcache.net|162.211.92.143|:80... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 58631106 (56M) [video/mp4]
-Saving to: ‘Sengoku Musou (TV) Episode 1.mp4’
+Length: 57028263 (54M) [video/mp4]
+Saving to: 'Nanatsu no Taizai Episode 3.mp4'
 
-99% [=============================================================> ] 5,85,95,516 71.7KB/s   in 16m 54s
+Nanatsu no Taizai Episode 3.mp4          99%[==============================================================================> ]  54.35M  1.74MB/s   in 2m 17s 
 
-2015-01-12 09:31:27 (56.4 KB/s) - Connection closed at byte 58595516. Retrying.
+2015-01-13 14:29:12 (405 KB/s) - Connection closed at byte 56992560. Retrying.
 
---2015-01-12 09:31:28--  (try: 2)  http://s19.vidcache.net/stream/b4f835b701c8196880142f5a5a9351790bd3c12b?client_file_id=902765&redirected_from=s32.vidcache.net
-Connecting to s19.vidcache.net (s19.vidcache.net)|162.211.92.131|:80... connected.
+--2015-01-13 14:29:13--  (try: 2)  http://s31.vidcache.net/stream/5e608967206d65ff32d6a6fc9224b8cdcd7343a6?client_file_id=857520&redirected_from=s18.vidcache.net
+Connecting to s31.vidcache.net|162.211.92.143|:80... connected.
 HTTP request sent, awaiting response... 206 Partial Content
-Length: 58631106 (56M), 35590 (35K) remaining [video/mp4]
-Saving to: ‘Sengoku Musou (TV) Episode 1.mp4’
+Length: 57028263 (54M), 35703 (35K) remaining [video/mp4]
+Saving to: 'Nanatsu no Taizai Episode 3.mp4'
 
-100%[++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>] 5,86,31,106 50.7KB/s   in 0.7s   
+Nanatsu no Taizai Episode 3.mp4         100%[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>]  54.39M   192KB/s   in 0.2s   
 
-2015-01-12 09:31:32 (50.7 KB/s) - ‘Sengoku Musou (TV) Episode 1.mp4’ saved [58631106/58631106]
+2015-01-13 14:29:14 (192 KB/s) - 'Nanatsu no Taizai Episode 3.mp4' saved [57028263/57028263]
 
-File Downloaded
+Nanatsu no Taizai Episode 4
+fetching mirrors
+mirrors found
+downloadable mirror found
+attempting download from VidWoot
+--2015-01-13 14:29:17--  http://stream.vidcache.net/98ac2fc8be2d6973385ccf0a6a67507231fffb72.mp4?client_file_id=859550
+Resolving stream.vidcache.net... 162.211.92.143
+Connecting to stream.vidcache.net|162.211.92.143|:80... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: http://s29.vidcache.net/stream/98ac2fc8be2d6973385ccf0a6a67507231fffb72?client_file_id=859550&redirected_from=s31.vidcache.net [following]
+--2015-01-13 14:29:18--  http://s29.vidcache.net/stream/98ac2fc8be2d6973385ccf0a6a67507231fffb72?client_file_id=859550&redirected_from=s31.vidcache.net
+Resolving s29.vidcache.net... 162.211.92.141
+Connecting to s29.vidcache.net|162.211.92.141|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 56155956 (54M) [video/mp4]
+Saving to: 'Nanatsu no Taizai Episode 4.mp4'
+
+Nanatsu no Taizai Episode 4.mp4          99%[==============================================================================> ]  53.52M   258KB/s   in 2m 8s  
+
+2015-01-13 14:31:27 (428 KB/s) - Connection closed at byte 56120254. Retrying.
+
+--2015-01-13 14:31:28--  (try: 2)  http://s29.vidcache.net/stream/98ac2fc8be2d6973385ccf0a6a67507231fffb72?client_file_id=859550&redirected_from=s31.vidcache.net
+Connecting to s29.vidcache.net|162.211.92.141|:80... connected.
+HTTP request sent, awaiting response... 206 Partial Content
+Length: 56155956 (54M), 35702 (35K) remaining [video/mp4]
+Saving to: 'Nanatsu no Taizai Episode 4.mp4'
+
+Nanatsu no Taizai Episode 4.mp4         100%[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>]  53.55M   192KB/s   in 0.2s   
+
+2015-01-13 14:31:29 (192 KB/s) - 'Nanatsu no Taizai Episode 4.mp4' saved [56155956/56155956]
+
+Nanatsu no Taizai Episode 5
+fetching mirrors
+mirrors found
+downloadable mirror found
+attempting download from VidWoot
+--2015-01-13 14:31:32--  http://stream.vidcache.net/4980e74c38fca21a57a4ff2665d305b7cfc3887a.mp4?client_file_id=860866
+Resolving stream.vidcache.net... 162.211.92.135, 162.211.92.143, 162.211.92.140, ...
+Connecting to stream.vidcache.net|162.211.92.135|:80... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: http://s16.vidcache.net/stream/4980e74c38fca21a57a4ff2665d305b7cfc3887a?client_file_id=860866&redirected_from=s23.vidcache.net [following]
+--2015-01-13 14:31:32--  http://s16.vidcache.net/stream/4980e74c38fca21a57a4ff2665d305b7cfc3887a?client_file_id=860866&redirected_from=s23.vidcache.net
+Resolving s16.vidcache.net... 162.211.92.152
+Connecting to s16.vidcache.net|162.211.92.152|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 58609845 (56M) [video/mp4]
+Saving to: 'Nanatsu no Taizai Episode 5.mp4'
+
+Nanatsu no Taizai Episode 5.mp4          99%[==============================================================================> ]  55.86M   257KB/s   in 1m 55s 
+
+2015-01-13 14:33:28 (495 KB/s) - Connection closed at byte 58574079. Retrying.
+
+--2015-01-13 14:33:29--  (try: 2)  http://s16.vidcache.net/stream/4980e74c38fca21a57a4ff2665d305b7cfc3887a?client_file_id=860866&redirected_from=s23.vidcache.net
+Connecting to s16.vidcache.net|162.211.92.152|:80... connected.
+HTTP request sent, awaiting response... 206 Partial Content
+Length: 58609845 (56M), 35766 (35K) remaining [video/mp4]
+Saving to: 'Nanatsu no Taizai Episode 5.mp4'
+
+Nanatsu no Taizai Episode 5.mp4         100%[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>]  55.89M  --.-KB/s   in 0.1s   
+
+2015-01-13 14:33:29 (366 KB/s) - 'Nanatsu no Taizai Episode 5.mp4' saved [58609845/58609845]
+
+Nanatsu no Taizai Episode 6
+fetching mirrors
+mirrors found
+downloadable mirror found
+attempting download from VidWoot
+--2015-01-13 14:33:33--  http://stream.vidcache.net/107127e7055fbbcc522be87e2a7c5c58f018642e.mp4?client_file_id=862402
+Resolving stream.vidcache.net... 162.211.92.144, 162.211.92.132, 162.211.92.140, ...
+Connecting to stream.vidcache.net|162.211.92.144|:80... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: http://s16.vidcache.net/stream/107127e7055fbbcc522be87e2a7c5c58f018642e?client_file_id=862402&redirected_from=s32.vidcache.net [following]
+--2015-01-13 14:33:34--  http://s16.vidcache.net/stream/107127e7055fbbcc522be87e2a7c5c58f018642e?client_file_id=862402&redirected_from=s32.vidcache.net
+Resolving s16.vidcache.net... 162.211.92.152
+Connecting to s16.vidcache.net|162.211.92.152|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 56482475 (54M) [video/mp4]
+Saving to: 'Nanatsu no Taizai Episode 6.mp4'
+
+Nanatsu no Taizai Episode 6.mp4          99%[==============================================================================> ]  53.83M   253KB/s   in 1m 50s 
+
+2015-01-13 14:35:25 (501 KB/s) - Connection closed at byte 56446772. Retrying.
+
+--2015-01-13 14:35:26--  (try: 2)  http://s16.vidcache.net/stream/107127e7055fbbcc522be87e2a7c5c58f018642e?client_file_id=862402&redirected_from=s32.vidcache.net
+Connecting to s16.vidcache.net|162.211.92.152|:80... connected.
+HTTP request sent, awaiting response... 206 Partial Content
+Length: 56482475 (54M), 35703 (35K) remaining [video/mp4]
+Saving to: 'Nanatsu no Taizai Episode 6.mp4'
+
+Nanatsu no Taizai Episode 6.mp4         100%[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>]  53.87M   180KB/s   in 0.2s   
+
+2015-01-13 14:35:26 (180 KB/s) - 'Nanatsu no Taizai Episode 6.mp4' saved [56482475/56482475]
+
+Nanatsu no Taizai Episode 7
+fetching mirrors
+mirrors found
+downloadable mirror found
+attempting download from VidWoot
+--2015-01-13 14:35:29--  http://stream.vidcache.net/baba6033aa721f77e4617ee21c71a58d3f2f46c5.mp4?client_file_id=865266
+Resolving stream.vidcache.net... 162.211.92.130, 162.211.92.141, 162.211.92.132, ...
+Connecting to stream.vidcache.net|162.211.92.130|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 55989282 (53M) [video/mp4]
+Saving to: 'Nanatsu no Taizai Episode 7.mp4'
+
+Nanatsu no Taizai Episode 7.mp4          99%[==============================================================================> ]  53.36M   221KB/s   in 2m 8s  
+
+2015-01-13 14:37:39 (428 KB/s) - Connection closed at byte 55953581. Retrying.
+
+--2015-01-13 14:37:40--  (try: 2)  http://stream.vidcache.net/baba6033aa721f77e4617ee21c71a58d3f2f46c5.mp4?client_file_id=865266
+Connecting to stream.vidcache.net|162.211.92.130|:80... connected.
+HTTP request sent, awaiting response... 206 Partial Content
+Length: 55989282 (53M), 35701 (35K) remaining [video/mp4]
+Saving to: 'Nanatsu no Taizai Episode 7.mp4'
+
+Nanatsu no Taizai Episode 7.mp4         100%[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++>]  53.40M   178KB/s   in 0.2s   
+
+2015-01-13 14:37:43 (178 KB/s) - 'Nanatsu no Taizai Episode 7.mp4' saved [55989282/55989282]
+
+
+******************************
+Nanatsu no Taizai Episode 3	Done
+Nanatsu no Taizai Episode 4	Done
+Nanatsu no Taizai Episode 5	Done
+Nanatsu no Taizai Episode 6	Done
+Nanatsu no Taizai Episode 7	Done
+******************************
+mac → 
 ```
 
 
@@ -69,3 +200,6 @@ File Downloaded
 4. reports on undownloadable episodes and undiscovered mirrors
 5. windows and python 3 support
 6. -D option for explicitly specifying output directory
+
+
+special thanks to Derrick Kearney for helping me test it wit hhis first world internet connection.
