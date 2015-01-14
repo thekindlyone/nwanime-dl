@@ -7,7 +7,7 @@ def read(*paths):
 setup(name='nwanime_dl',
       version='1.8',
       description='downloads anime from nwanime',
-      long_description=(read('readme.rst'))
+      long_description=(read('readme.rst')),
       url='https://github.com/thekindlyone/nwanime-dl',
       author='thekindlyone',
       author_email='dodo.dodder@gmail.com',
