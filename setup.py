@@ -1,13 +1,13 @@
 from setuptools import setup
-try:
-    import pypandoc
-    description=pypandoc.convert('readme.md','rst')
-except:
-    description=''
+import os
+def read(*paths):
+    """Build a file path from *paths* and return the contents."""
+    with open(os.path.join(*paths), 'r') as f:
+        return f.read()
 setup(name='nwanime_dl',
-      version='1.7',
+      version='1.8',
       description='downloads anime from nwanime',
-      long_description=description,
+      long_description=(read('readme.rst'))
       url='https://github.com/thekindlyone/nwanime-dl',
       author='thekindlyone',
       author_email='dodo.dodder@gmail.com',
