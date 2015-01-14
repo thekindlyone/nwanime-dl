@@ -5,7 +5,7 @@ def read(*paths):
     with open(os.path.join(*paths), 'r') as f:
         return f.read()
 setup(name='nwanime_dl',
-      version='1.8.1',
+      version='1.8.2',
       description='downloads anime from nwanime',
       long_description=(read('readme.rst')),
       url='https://github.com/thekindlyone/nwanime-dl',

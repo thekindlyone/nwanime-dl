@@ -109,7 +109,7 @@ to do:
 5. windows and python 3 support
 6. -D option for explicitly specifying output directory [X]
 
-special thanks to `Derrick Kearney <https://github.com/diek>`__ for
+special thanks to `Derrick Kearney <https://github.com/diek>`_ for
 helping me test it .
 
 .. |Supported Python versions| image:: https://pypip.in/py_versions/nwanime_dl/badge.svg
