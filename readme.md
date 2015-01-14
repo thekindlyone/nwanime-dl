@@ -1,6 +1,10 @@
 # nwanime-dl Anime Downloader   
 ## Downloads anime from http://www.nwanime.com/ 
 
+
+###Note: Currently works only for linux as it uses wget for the final download.
+
+
 ###Installation:
 git clone this repo. then run       
 ```python setup.py install```          
