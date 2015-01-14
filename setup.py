@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='nwanime_dl',
-      version='1.0',
+      version='1.1',
       description='downloads anime from nwanime',
       url='https://github.com/thekindlyone/nwanime-dl',
       author='thekindlyone',

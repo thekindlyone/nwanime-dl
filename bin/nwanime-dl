@@ -4,6 +4,8 @@ import sys
 from nwanime_dl import download
 from nwanime_dl.helper import get_next_episode_url as next_epi
 import argparse
+from os.path import isdir, expanduser
+from os import chdir
 
 def urls(first,number):
     current=first
@@ -33,7 +35,12 @@ def main():
     parser.add_argument('-i','--iterative',help='''For range downloads. 
     eg. nwanime-dl -i 10 <url>
     will download iteratively the video in <url> and the next 9 videos(total 10)''',type=int)
+    parser.add_argument('-d','--directory',help='Explicitly specify output directory. Current directory by default.')
     args=parser.parse_args()
+    if args.directory:
+        path=expanduser(args.directory)
+        if isdir(path):
+            chdir(path)
     url=args.url
     statuslist=[]
     if not args.iterative:

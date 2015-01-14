@@ -199,7 +199,7 @@ mac →
 3. range downloader    [X]
 4. reports on undownloadable episodes and undiscovered mirrors
 5. windows and python 3 support
-6. -D option for explicitly specifying output directory
+6. -D option for explicitly specifying output directory    [X]
 
 
 special thanks to [Derrick Kearney](https://github.com/diek) for helping me test it .
