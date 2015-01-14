@@ -121,10 +121,12 @@ def get_next_episode_url(url):
     gets the link to the next episode.
     """
     soup=get_soup(url)
+    nextlink=None
     try:
-        div=soup.findAll('div',style="FONT-WEIGHT: bold; FONT-SIZE: 12px; PADDING-TOP: 3px")[1]
+        div=soup.findAll('div',style="FONT-WEIGHT: bold; FONT-SIZE: 12px; PADDING-TOP: 3px")[-1]
         anchor=div.find('a')
-        nextlink=anchor.get('href',None)
+        if 'NEXT' in anchor.text:
+            nextlink=anchor.get('href',None)
     except:
         nextlink=None
     return nextlink
