@@ -40,7 +40,7 @@ def download(url):
                         video = video.group(1)
                         outfile = vidname + get_ext(video)
                         print 'attempting download from', mirror
-                        wget = subprocess.Popen(['wget', '-c','-O', outfile, video])
+                        wget = subprocess.Popen(['wget','-O', outfile, video])
                         wget.wait()
                         return wget.returncode,vidname
     else:

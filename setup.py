@@ -1,8 +1,9 @@
 from setuptools import setup
 
 setup(name='nwanime_dl',
-      version='1.1',
+      version='1.2',
       description='downloads anime from nwanime',
+      long_description_markdown_filename='readme.md',
       url='https://github.com/thekindlyone/nwanime-dl',
       author='thekindlyone',
       author_email='dodo.dodder@gmail.com',
