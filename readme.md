@@ -4,7 +4,8 @@
 ###Installation:
 git clone this repo. then run       
 ```python setup.py install```
-
+or
+```pip install nwanime-dl```
 ###Dependencies:
 1. Requests library
 2. Beautifulsoup library
