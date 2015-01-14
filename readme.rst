@@ -4,7 +4,7 @@ nwanime-dl Anime Downloader
 Downloads anime from http://www.nwanime.com/
 --------------------------------------------
 
-|Supported Python versions| |License| |Development Status|
+
 
 Note: Currently works only for linux and mac as it uses wget for the final download.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,9 +112,4 @@ to do:
 special thanks to `Derrick Kearney <https://github.com/diek>`_ for
 helping me test it .
 
-.. |Supported Python versions| image:: https://pypip.in/py_versions/nwanime_dl/badge.svg
-   :target: https://pypi.python.org/pypi/<nwanime_dl>/
-.. |License| image:: https://pypip.in/license/nwanime_dl/badge.svg
-   :target: https://pypi.python.org/pypi/nwanime_dl/
-.. |Development Status| image:: https://pypip.in/status/nwanime_dl/badge.svg
-   :target: https://pypi.python.org/pypi/nwanime_dl/
+
