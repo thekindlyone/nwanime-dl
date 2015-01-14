@@ -3,19 +3,23 @@
 
 ###Installation:
 git clone this repo. then run       
-```python setup.py install```
+```python setup.py install```          
 or               
 ```pip install nwanime-dl```
+
+
 ###Dependencies:
 1. Requests library
 2. Beautifulsoup library
 3. wget
 
-###usage:       
+###Usage:       
 ```nwanime-dl <url>```       
 ```nwanime-dl -i 10 <url>```      
+
+
 ```
-usage: nwanime-dl [-h] [-i ITERATIVE] url
+usage: nwanime-dl [-h] [-i ITERATIVE] [-d DIRECTORY] url
 
 positional arguments:
   url                   url to download video from. In case of iterative
@@ -27,9 +31,13 @@ optional arguments:
                         For range downloads. eg. nwanime-dl -i 10 <url> will
                         download iteratively the video in <url> and the next 9
                         videos(total 10)
+  -d DIRECTORY, --directory DIRECTORY
+                        Explicitly specify output directory. Current directory
+                        by default.
+
 ```
 
-###example:     
+###Example:     
 ```
 mac → nwanime-dl -i 5 http://www.nwanime.com/nanatsu-no-taizai-episode-3/video/640cffdd3031e7ff06ce/
 Nanatsu no Taizai Episode 3
