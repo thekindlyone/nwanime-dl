@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='nwanime_dl',
-      version='1.5',
+      version='1.6',
       description='downloads anime from nwanime',
       long_description_markdown_filename='readme.md',
       url='https://github.com/thekindlyone/nwanime-dl',
@@ -13,4 +13,11 @@ setup(name='nwanime_dl',
           'beautifulsoup4',
           'requests'   ],
       scripts=['bin/nwanime-dl'],
+      classifiers=[
+          "Development Status :: 3 - Alpha",
+          "Topic :: Utilities",
+          "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+          "Operating System :: POSIX :: Linux",
+          "Programming Language :: Python :: 2.7"          
+      ],
       zip_safe=False)
