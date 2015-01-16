@@ -104,3 +104,7 @@ Nanatsu no Taizai Episode 13	Done
 
 
 special thanks to [Derrick Kearney](https://github.com/diek) for helping me test it .
+
+PS:
+
+if you are using vlc to play these files and are missing a play next/prev file feature.. try [vlcwrapy-nix]()

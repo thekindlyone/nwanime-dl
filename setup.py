@@ -6,7 +6,7 @@ try:
 except:
     description=''
 setup(name='nwanime_dl',
-      version='1.8.5',
+      version='1.8.6',
       description='downloads anime from nwanime',
       long_description=description,
       url='https://github.com/thekindlyone/nwanime-dl',
@@ -16,6 +16,7 @@ setup(name='nwanime_dl',
       packages=['nwanime_dl'],
       install_requires=[
           'beautifulsoup4',
+          'lxml',
           'requests'   ],
       scripts=['bin/nwanime-dl'],
       classifiers=[
