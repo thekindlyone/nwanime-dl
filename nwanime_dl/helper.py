@@ -67,14 +67,16 @@ def get_mirrors(url):
     """
     soup = get_soup(url)
     try:
-        mirrors = [(anchor.text.split()[0], anchor.get('href'))
-                   for anchor in soup.select('#video_mirrors > div > span.link > a') if '[US only]' not in anchor.text and 'SUB' in anchor.contents[0].text]
+        divs = soup.findAll('div', class_='ddl')
+        mirrors = [(div.find('span', class_='link').a.get('href'), div.find('span', class_='link').a.text.split()[
+                    0]) for div in divs if 'SUB' in div.text and '[US only]' not in div.text]
     except:
         mirrors = None
     return mirrors
 
 
 class Table(object):
+
     """
     accumulator for sampler
     """
@@ -116,20 +118,23 @@ def get_vidname(url):
         name = None
     return name
 
+
 def get_next_episode_url(url):
     """
     gets the link to the next episode.
     """
-    soup=get_soup(url)
-    nextlink=None
+    soup = get_soup(url)
+    nextlink = None
     try:
-        div=soup.findAll('div',style="FONT-WEIGHT: bold; FONT-SIZE: 12px; PADDING-TOP: 3px")[-1]
-        anchor=div.find('a')
+        div = soup.findAll(
+            'div', style="FONT-WEIGHT: bold; FONT-SIZE: 12px; PADDING-TOP: 3px")[-1]
+        anchor = div.find('a')
         if 'NEXT' in anchor.text:
-            nextlink=anchor.get('href',None)
+            nextlink = anchor.get('href', None)
     except:
-        nextlink=None
+        nextlink = None
     return nextlink
+
 
 def main():
     if not exists(allanimes):

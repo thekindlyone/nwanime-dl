@@ -116,7 +116,7 @@ Nanatsu no Taizai Episode 13	Done
 4. reports on undownloadable episodes and undiscovered mirrors
 5. windows and python 3 support
 6. -D option for explicitly specifying output directory    [X]
-
+7. Pick only SUbbed mirrors    [X]
 
 special thanks to [Derrick Kearney](https://github.com/diek) for helping me test it .
 
