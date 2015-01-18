@@ -68,7 +68,7 @@ def get_mirrors(url):
     soup = get_soup(url)
     try:
         mirrors = [(anchor.text.split()[0], anchor.get('href'))
-                   for anchor in soup.select('#video_mirrors > div > span.link > a') if '[US only]' not in anchor.text]
+                   for anchor in soup.select('#video_mirrors > div > span.link > a') if '[US only]' not in anchor.text and 'SUB' in anchor.text]
     except:
         mirrors = None
     return mirrors
