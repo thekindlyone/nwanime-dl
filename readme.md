@@ -6,6 +6,7 @@
 
 ###Note: Currently works only for linux and mac as it uses wget for the final download.
 
+###Edit: It works with windows too, provided the steps mentioned below under "Windows Specific Instructions" are followed.
 
 ###Installation:
 git clone this repo. then run       
@@ -13,11 +14,25 @@ git clone this repo. then run
 or               
 ```pip install nwanime-dl```
 
+###Windows Specific Instructions:        
+1. You will need to add ```c:\python27\Scripts``` or equivalent location to your path variable. Learn how to do that [here](http://www.computerhope.com/issues/ch000549.htm).
+Look at the other entries for pointers on formatting.
+2. Download [Wget for windows](http://gnuwin32.sourceforge.net/packages/wget.htm) and rename the file to wget.exe(notice the lowercase 'w'). Place wget.exe in some directory and add that to the PATH variable as well.
+3. In the environment variables, open PATHEXT and add ```;.``` at the end. This means extensionless files will be considered executables.
+4. the setup drops a script called 'nwanime-dl' in the ```python27\scripts``` directory. To be able to access and run this script from the command line, run the following commands 
+in an elevated command prompt(command prompt in administrator mode)
+```
+assoc .=Python.File
+ftype Python.File=c:\Python27\python.exe "%1" %*
+```
+5. restart the computer.
 
 ###Dependencies:
 1. Requests library
 2. Beautifulsoup library
 3. wget
+4. lxml      
+These are automatically installed if you use pip.
 
 ###Usage:       
 ```nwanime-dl <url>```       
