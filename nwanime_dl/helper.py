@@ -68,8 +68,8 @@ def get_mirrors(url):
     soup = get_soup(url)
     try:
         divs = soup.findAll('div', class_='ddl')
-        mirrors = [(div.find('span', class_='link').a.get('href'), div.find('span', class_='link').a.text.split()[
-                    0]) for div in divs if 'SUB' in div.text and '[US only]' not in div.text]
+        mirrors = [(div.find('span', class_='link').a.text.split()[0], div.find('span', class_='link').a.get(
+            'href')) for div in divs if 'SUB' in div.text and '[US only]' not in div.text]
     except:
         mirrors = None
     return mirrors
