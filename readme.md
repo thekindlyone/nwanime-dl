@@ -21,6 +21,7 @@ Look at the other entries for pointers on formatting.
 3. In the environment variables, open PATHEXT and add ```;.``` at the end. This means extensionless files will be considered executables.
 4. the setup drops a script called 'nwanime-dl' in the ```python27\scripts``` directory. To be able to access and run this script from the command line, run the following commands 
 in an elevated command prompt(command prompt in administrator mode)
+
 ```
 assoc .=Python.File
 ftype Python.File=c:\Python27\python.exe "%1" %*
@@ -35,9 +36,6 @@ ftype Python.File=c:\Python27\python.exe "%1" %*
 These are automatically installed if you use pip.
 
 ###Usage:       
-```nwanime-dl <url>```       
-```nwanime-dl -i 10 <url>```      
-
 
 ```
 usage: nwanime-dl [-h] [-i ITERATIVE] [-d DIRECTORY] url
