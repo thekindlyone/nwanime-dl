@@ -4,8 +4,10 @@ import sys
 from nwanime_dl import download
 from nwanime_dl.helper import get_next_episode_url as next_epi
 import argparse
-from os.path import isdir, expanduser
+from os.path import isdir, expanduser, exists
 from os import chdir
+
+logfile='.nwanime-dl'
 
 def urls(first,number):
     current=first
@@ -26,12 +28,21 @@ def generate_report(statuslist):
 {0}'''.format('*'*30,'\n'.join(statuslist))
     return report 
 
+def getlog():
+    if exists(logfile):
+        with open(logfile) as f:
+            url=f.read()
+    else:
+        url=None
+    return url
 
-
+def writelog(url):
+    with open(logfile,'w') as f:
+        f.write(url)
 
 def main():
-    parser=argparse.ArgumentParser()
-    parser.add_argument('url',help='url to download video from. In case of iterative starting url')
+    parser=argparse.ArgumentParser(description="Downloads anime from nwanime.com",)
+    parser.add_argument('url',help='url to download video from. In case of iterative starting url. "continue" to continue from last downloaded file in directory.')
     parser.add_argument('-i','--iterative',help='''For range downloads. 
     eg. nwanime-dl -i 10 <url>
     will download iteratively the video in <url> and the next 9 videos(total 10)''',type=int)
@@ -42,12 +53,21 @@ def main():
         if isdir(path):
             chdir(path)
     url=args.url
+    if url=='continue':
+        lasturl=getlog()
+        if lasturl:
+            url=next_epi(lasturl)
+        else:
+            parser.print_help()
+            sys.exit(0)
     statuslist=[]
     if not args.iterative:
         download(url)
+        writelog(url)
     else:
         for episode in urls(url,args.iterative):
             result,name=download(episode)
+            writelog(url)
             statuslist.append(name+'\tDone' if result==0 else '\tNot Done')
         print generate_report(statuslist)
 

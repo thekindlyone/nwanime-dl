@@ -42,9 +42,12 @@ These are automatically installed if you use pip.
 ```
 usage: nwanime-dl [-h] [-i ITERATIVE] [-d DIRECTORY] url
 
+Downloads anime from nwanime.com
+
 positional arguments:
   url                   url to download video from. In case of iterative
-                        starting url
+                        starting url. "continue" to continue from last
+                        downloaded file in directory.
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -57,6 +60,19 @@ optional arguments:
                         by default.
 
 ```
+###common patterns:
+    
+Download episode and 9 next episodes.         
+```nwanime-dl -i 10 http://www.nwanime.com/.../video/eb...2/```
+
+Download next episode after last downloaded episode in directory.(works only if nwanime-dl has downloaded to this directory before.)            
+```nwanime-dl continue```
+
+Continue and keep going till 10 episodes                      
+```nwanime-dl -i 10 continue```
+
+
+
 
 ###Example:     
 ```
@@ -117,7 +133,7 @@ Nanatsu no Taizai Episode 13	Done
 5. windows and python 3 support
 6. -D option for explicitly specifying output directory    [X]
 7. Pick only SUbbed mirrors    [X]
-
+8. Per directory continue feature    [X]                        
 special thanks to [Derrick Kearney](https://github.com/diek) for helping me test it .
 
 PS:
