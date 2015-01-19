@@ -61,12 +61,15 @@ optional arguments:
 ###common patterns:
     
 Download episode and 9 next episodes.         
+
 ```nwanime-dl -i 10 http://www.nwanime.com/.../video/eb...2/```
 
 Download next episode after last downloaded episode in directory.(works only if nwanime-dl has downloaded to this directory before.)            
+
 ```nwanime-dl continue```
 
 Continue and keep going till 10 episodes                      
+
 ```nwanime-dl -i 10 continue```
 
 
