@@ -67,7 +67,7 @@ def main():
     else:
         for episode in urls(url,args.iterative):
             result,name=download(episode)
-            writelog(url)
+            writelog(episode)
             statuslist.append(name+'\tDone' if result==0 else '\tNot Done')
         print generate_report(statuslist)
 
