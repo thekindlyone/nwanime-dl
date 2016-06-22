@@ -30,7 +30,7 @@ def download(url):
     print 'mirrors found'
     for mirror, link in mirrors:
         if mirror in regexes.extractors:
-            print 'downloadable mirror found',mirror
+            print 'downloadable mirror found'
             jsfile = fetch_js(link)
             if jsfile:
                 r = requests.get(jsfile)
