@@ -6,7 +6,7 @@ try:
 except:
     description=''
 setup(name='nwanime_dl',
-      version='1.8.6.7.4',
+      version='1.8.6.7.3',
       description='downloads anime from nwanime',
       long_description=description,
       url='https://github.com/thekindlyone/nwanime-dl',
