@@ -6,17 +6,17 @@ import random
 import pickle
 from pprint import pprint
 from os.path import exists
-
+import logging
 mirror_table = 'mirror_table.p'
 allanimes = 'allanimes.p'
 reject_list = ['facebook', 'bit.ly']
-
+logging.getLogger("requests").setLevel(logging.WARNING)
 
 def get_soup(url):
     """
     returns BeautifulSoup(html content of url)
     """
-    print 'requesting',url
+    logging.debug('requesting '+url)
     r = requests.get(url,timeout=10)
     if r.status_code == 200:
         return bs(r.content,'lxml')

@@ -24,14 +24,15 @@ def download(url):
     download(url)
     """
     vidname = get_vidname(url)
-    print vidname
-    print 'fetching mirrors'
+    logging.info(vidname)
+    logging.debug('fetching mirrors')
     mirrors = get_mirrors(url)
-    print 'mirrors found'
+    logging.debug('mirrors found')
     for mirror, link in mirrors:
         if mirror in regexes.extractors:
-            print 'downloadable mirror found',mirror
+            logging.debug('downloadable mirror found '+mirror)
             jsfile = fetch_js(link)
+            logging.debug('JS link: '+jsfile)
             if jsfile:
                 r = requests.get(jsfile)
                 if r.status_code == 200:
@@ -39,12 +40,12 @@ def download(url):
                     if video:
                         video = video.group(1)
                         outfile = vidname + get_ext(video)
-                        print 'attempting download from', mirror
+                        logging.info('attempting download from '+ mirror)
                         wget = subprocess.Popen(['wget','--continue','-O', outfile, video])
                         wget.wait()
                         return wget.returncode,vidname
     else:
-        print "Can't Download. No downloadable mirrors found. Sorry."
+        logging.error( "Can't Download. No downloadable mirrors found. Sorry.")
         return 1,vidname
 
 def main():

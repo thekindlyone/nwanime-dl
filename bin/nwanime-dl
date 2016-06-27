@@ -6,7 +6,7 @@ from nwanime_dl.helper import get_next_episode_url as next_epi
 import argparse
 from os.path import isdir, expanduser, exists
 from os import chdir
-
+import logging
 logfile='.nwanime-dl'
 
 def urls(first,number):
@@ -47,7 +47,12 @@ def main():
     eg. nwanime-dl -i 10 <url>
     will download iteratively the video in <url> and the next 9 videos(total 10)''',type=int)
     parser.add_argument('-d','--directory',help='Explicitly specify output directory. Current directory by default.')
+    parser.add_argument('-l','--loglevel',help='logging level DEBUG or INFO',default='INFO')
     args=parser.parse_args()
+    numeric_level = getattr(logging, args.loglevel.upper(), None)
+    if not isinstance(numeric_level, int):
+        numeric_level=getattr(logging, 'INFO')
+    logging.basicConfig(level=numeric_level)
     if args.directory:
         path=expanduser(args.directory)
         if isdir(path):
@@ -69,7 +74,7 @@ def main():
             result,name=download(episode)
             writelog(episode)
             statuslist.append(name+'\tDone' if result==0 else '\tNot Done')
-        print generate_report(statuslist)
+        logging.info(generate_report(statuslist))
 
 
 
