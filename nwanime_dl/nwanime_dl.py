@@ -9,7 +9,7 @@ import regexes
 from helper import get_soup, get_mirrors, fetch_js, get_vidname
 from urlparse import urlparse
 from os.path import splitext
-
+import logging
 
 def get_ext(video_url):
     """get extention of file from video url"""
@@ -40,7 +40,7 @@ def download(url):
                         video = video.group(1)
                         outfile = vidname + get_ext(video)
                         print 'attempting download from', mirror
-                        wget = subprocess.Popen(['wget','-O', outfile, video])
+                        wget = subprocess.Popen(['wget','--continue','-O', outfile, video])
                         wget.wait()
                         return wget.returncode,vidname
     else:
