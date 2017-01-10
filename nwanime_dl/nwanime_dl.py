@@ -51,7 +51,9 @@ def download(url):
 def main():
     if len(sys.argv) > 1:
         url = sys.argv[1]
-        download(url)
+        vidname = get_vidname(url)
+        print vidname
+        # download(url)
     else:
         print 'usage :nwanime-dl <url>'
         sys.exit(1)

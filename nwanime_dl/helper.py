@@ -7,6 +7,7 @@ import pickle
 from pprint import pprint
 from os.path import exists
 import logging
+import re
 mirror_table = 'mirror_table.p'
 allanimes = 'allanimes.p'
 reject_list = ['facebook', 'bit.ly']
@@ -115,6 +116,8 @@ def get_vidname(url):
     soup = get_soup(url)
     try:
         name = soup.select('#content_head > a:nth-of-type(3)')[0].text
+        match=re.search('(.+?)(\d+)',name)
+        name = match.group(1)+match.group(2).zfill(3)
     except:
         name = None
     return name
