@@ -10,6 +10,7 @@ from helper import get_soup, get_mirrors, fetch_js, get_vidname
 from urlparse import urlparse
 from os.path import splitext
 import logging
+from string import join
 
 def get_ext(video_url):
     """get extention of file from video url"""
@@ -40,6 +41,7 @@ def download(url):
                     if video:
                         video = video.group(1)
                         outfile = vidname + get_ext(video)
+                        outfile = "".join(l for l in outfile if l not in '<>:"/\\') # Removing characters which aren't allowed in Windows filenames
                         logging.info('attempting download from '+ mirror)
                         wget = subprocess.Popen(['wget','--continue','-O', outfile, video])
                         wget.wait()
